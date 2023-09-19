@@ -49,7 +49,7 @@ section {
 
 section.home {
   padding: 100px;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   margin-top: 0;
 }
@@ -57,8 +57,8 @@ section.home {
 .home-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
   min-height: 0;
 }
 
@@ -81,8 +81,8 @@ section.home {
 
 .home-img {
   display: flex;
+  /* align-items: center; */
   justify-content: center;
-  align-items: center;
   flex-shrink: 0;
   width: 600px;
 }
@@ -93,6 +93,9 @@ section.home {
 }
 
 .home-h1 {
+  display: flex;
+  justify-content: center;
+
   margin: 10px 30px 50px;
 }
 
@@ -113,22 +116,6 @@ section.home {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
-}
-
-.home-graph {
-  padding-top: 100px 0px;
-  color: red;
-  background-color: var(--primary-color);
-}
-
-.home-comp {
-  margin: 100px 150px 0px;
-  padding: 40px 20px;
-
-  background-color: var(--back-color);
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* BUTTON */
@@ -159,13 +146,17 @@ section.home {
 }
 
 .logo {
-  position: absolute;
-  top: 30px;
-  left: 100px;
+  position: fixed;
+  top: 10px;
+  left: 70px;
   font-size: 2rem;
   font-weight: 700;
   z-index: 20;
   /* to show even when we open menu */
+}
+
+.logo a img {
+  width: 275px;
 }
 
 /* TOGGLE */
@@ -252,36 +243,59 @@ section.home {
   transform: scale(0.8);
 }
 
-/* SERVICES PAGE */
+/* SERVICES AREA */
+
+.home-graph {
+  background-color: var(--primary-color);
+}
+
+.home-comp {
+  margin: 100px 100px;
+  background-color: var(--back-color);
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px 40px;
+}
+
 .services {
-  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 2;
-  gap: 50px;
+  gap: 30px;
   text-align: center;
 }
 
 .services .service {
   transition: 0.3s;
-  padding: 10px 30px;
+  /* padding: 5px 20px; */
+  margin: 20px 20px;
 }
 
 .services .service:hover {
   transition: 0.3s;
+  border-radius: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transform: scale(1.05);
 }
 
 .services .service .icon img {
   max-width: 200px;
+  -webkit-filter: hue-rotate(170deg);
+}
+
+.services .service p {
+  color: black;
+  font-weight: 300;
+  padding: 10px 0px;
+  margin: 0px 20px;
 }
 
 .services .service h2 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 800;
   margin-top: 20px;
-  color: #1b206e;
+  color: #163e00;
 }
 
 /* -- WORK PAGE -- */
