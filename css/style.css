@@ -398,6 +398,101 @@ section.home-review .review-buttons {
   border-radius: 5px;
 }
 
+/* !-- REVIEW CARDS --! */
+
+.box-review .item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  flex-shrink: 0;
+}
+
+.box-review .item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.box-review .item .action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.box-review .item:hover .action {
+  opacity: 1;
+}
+
+.box-review .item .action a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+/*  */
+
+.box-review {
+  background-color: var(--accent-color);
+  border-radius: 15px;
+  margin: 20px 0px;
+  padding: 20px;
+  align-self: center;
+
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+.box-review .review-bio {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 5px;
+}
+
+.box-review .review-bio p {
+  margin: 10px;
+  align-items: flex-end;
+  font-size: 24px;
+  text-align: center;
+  width: 450px;
+  font-weight: 200;
+}
+
+.box-review .review-bio div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.box-review .review-bio span {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.box-review .review-bio h3 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.box-review .review-bio img {
+  /* display: inline; */
+  width: 50px;
+}
+
 /* -- CONTACT -- */
 
 .contact {
