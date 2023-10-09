@@ -218,20 +218,15 @@ section.home {
 }
 
 .navigation ul li a {
-  font-size: 2.2rem;
+  font-size: 4rem;
   color: #111;
   text-decoration: none;
   font-weight: 300;
+  transition: 0.3s;
 }
 
 .navigation ul li a:hover {
   color: var(--primary-color);
-}
-
-.navigation .email-icon {
-  position: absolute;
-  bottom: 20px;
-  transform: scale(0.5);
 }
 
 .navigation .social-bar {
@@ -243,11 +238,6 @@ section.home {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.navigation .social-bar a {
-  display: inline-block;
-  transform: scale(0.8);
 }
 
 /* SERVICES AREA */
@@ -331,6 +321,7 @@ section.home-review .review-img {
 }
 
 section.home-review .review-buttons {
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -433,6 +424,12 @@ section.home-review .review-buttons {
   object-fit: cover;
 }
 
+.box-review .item #owenPC {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
+}
+
 .box-review .item .action {
   position: absolute;
   top: 0;
@@ -469,7 +466,7 @@ section.home-review .review-buttons {
   margin: 20px 0px;
   padding: 20px 0px;
   align-self: center;
-  width: 80%;
+  width: 85%;
   display: flex;
   /* gap: 24px; */
   justify-content: space-evenly;
@@ -537,17 +534,22 @@ section.home-review .review-buttons {
 .contact {
   position: relative;
   width: 100%;
-  margin-top: 50px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-color);
+  margin-top: 50px;
+  padding: 50px 0px;
+  border-radius: 20px;
 }
 
 .contact-form {
   position: relative;
   background: #f9f9f9;
-  width: calc(100% - 400px);
-  padding: 60px 40px 20px;
+  width: calc(100% - 100px);
+  padding: 20px 40px;
+  border-radius: 20px;
 }
 
 .contact-form form {
@@ -589,14 +591,22 @@ section.home-review .review-buttons {
 }
 
 .contact-form .row input[type="submit"] {
-  background-color: #1b206e;
-  color: white;
+  background-color: var(--accent-color);
+  color: rgb(0, 0, 0);
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 300;
   border: 0;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form .row input[type="submit"]:hover {
+  background-color: #388100e7;
+  color: rgb(69, 36, 0);
+  transform: scale(0.95);
+  border-radius: 20px;
 }
 
 .contact-info {
@@ -623,6 +633,19 @@ section.home-review .review-buttons {
 .contact-info .info-box .contact-icon {
   width: 40px;
   margin-right: 40px;
+}
+
+/* -- THANK YOU -- */
+
+.thankyou-para {
+  flex-direction: column;
+  padding: 150px 50px;
+  text-align: center;
+}
+
+.small {
+  font-weight: 100;
+  font-style: italic;
 }
 
 /* -- MEDIA QUERY -- */
@@ -674,7 +697,7 @@ section.home-review .review-buttons {
   }
 
   .contact-form {
-    width: 100%;
+    width: 90%;
     padding: 30px 30px 20px;
   }
 
