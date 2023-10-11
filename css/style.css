@@ -42,7 +42,7 @@ header {
 
 hr.solid {
   border-top: 1px solid #404040;
-  width: 75%;
+  width: 55%;
 }
 
 section {
@@ -397,6 +397,11 @@ section.home-review .review-buttons {
 
 /* !-- REVIEW CARDS --! */
 
+.reviews {
+  display: flex;
+  justify-content: center;
+}
+
 .box-review .item {
   position: relative;
   width: auto;
@@ -417,9 +422,8 @@ section.home-review .review-buttons {
   border-radius: 15px;
 }
 
-.box-review .item #mirandaPC {
+/* .box-review .item #mirandaPC {
   width: 250px;
-
   height: auto;
   object-fit: cover;
 }
@@ -429,6 +433,12 @@ section.home-review .review-buttons {
   height: 200px;
   object-fit: cover;
 }
+
+.box-review .item #mikPC {
+  width: auto;
+  height: 250px;
+  object-fit: cover; */
+/* } */
 
 .box-review .item .action {
   position: absolute;
@@ -463,13 +473,13 @@ section.home-review .review-buttons {
 .box-review {
   background-color: var(--accent-color);
   border-radius: 15px;
-  margin: 20px 0px;
+  margin: 20px 20px;
   padding: 20px 0px;
   align-self: center;
-  width: 85%;
+  width: 100%;
   display: flex;
-  /* gap: 24px; */
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .box-review .review-name {
@@ -492,6 +502,7 @@ section.home-review .review-buttons {
 }
 
 .box-review .review-bio {
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -507,16 +518,16 @@ section.home-review .review-buttons {
   font-weight: 300;
 }
 
-.box-review .review-bio div {
+/* .box-review .review-bio div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
+} */
 
 .box-review .review-bio span {
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .box-review .review-bio h3 {
@@ -544,10 +555,14 @@ section.home-review .review-buttons {
   border-radius: 20px;
 }
 
+.home-text .contact {
+  background-color: var(--back-color);
+}
+
 .contact-form {
   position: relative;
   background: #f9f9f9;
-  width: calc(100% - 100px);
+  width: 90%;
   padding: 20px 40px;
   border-radius: 20px;
 }
@@ -649,6 +664,35 @@ section.home-review .review-buttons {
 }
 
 /* -- MEDIA QUERY -- */
+@media (max-width: 1250px) {
+  .box-review .review-bio {
+    width: 100%;
+  }
+
+  .box-review .item {
+    height: auto;
+  }
+
+  .review-name img {
+    border-radius: 50%;
+    width: 100px;
+    height: auto;
+  }
+
+  .review-name h3 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .box-review .review-bio p {
+    margin: 10px;
+    align-items: flex-end;
+    font-size: 20px;
+    text-align: center;
+    width: 80%;
+    font-weight: 300;
+  }
+}
 
 @media (max-width: 1080px) {
   .home-img {
